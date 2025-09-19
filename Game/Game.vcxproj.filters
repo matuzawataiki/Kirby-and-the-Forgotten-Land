@@ -4,16 +4,40 @@
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp" />
-    <ClCompile Include="SnakeEnemy.cpp" />
-    <ClCompile Include="SnakeEnemy.cpp" />
-    <ClCompile Include="Enemy\State\IState.cpp" />
     <ClCompile Include="system\system.cpp" />
+    <ClCompile Include="Actor\Item\Block.cpp">
+      <Filter>Actor\Item</Filter>
+    </ClCompile>
+    <ClCompile Include="Effect\GameEffect.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Item\ItemManager.cpp">
+      <Filter>Actor\Item</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
     <ClInclude Include="stdafx.h" />
-    <ClInclude Include="EnemyBase.h" />
-    <ClInclude Include="GameClear.h" />
     <ClInclude Include="system\system.h" />
+    <ClInclude Include="Actor\Item\Block.h">
+      <Filter>Actor\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="Effect\GameEffect.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Item\ItemManager.h">
+      <Filter>Actor\Item</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Actor">
+      <UniqueIdentifier>{ed7d6133-d26c-4b9e-89b5-c0844d7590e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Item">
+      <UniqueIdentifier>{e0755d06-c773-478b-91d7-af67988cdb60}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{0ed46e59-8380-406a-959a-bdee00f52467}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>
