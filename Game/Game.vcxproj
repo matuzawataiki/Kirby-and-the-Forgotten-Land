@@ -227,7 +227,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Actor\Item\Block.cpp" />
+    <ClCompile Include="Effect\GameEffect.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Actor\Item\ItemManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -238,7 +240,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Actor\Item\Block.h" />
+    <ClInclude Include="Effect\GameEffect.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="Actor\Item\ItemManager.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="system\system.h" />
   </ItemGroup>

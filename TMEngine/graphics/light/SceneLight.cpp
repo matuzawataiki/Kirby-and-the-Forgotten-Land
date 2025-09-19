@@ -49,12 +49,12 @@ namespace nsTMEngine
 	{
 		//ディレクションライトの設定
 		m_light.m_drectionLight.SetDirection(1.0f, -1.0f, 1.0f);
-		m_light.m_drectionLight.SetColor(1.7f, 1.7f, 1.7f);
+		m_light.m_drectionLight.SetColor(0.7f, 0.7f, 0.7f);
 		//カメラの位置の登録
 		m_light.m_cameraPos = g_camera3D->GetPosition();
 		m_light.m_drectionLight.m_LVP = g_camera3D->GetViewProjectionMatrix();
 		//環境光の設定
-		m_light.SetAmbientLight(0.5f, 0.5f, 0.5f);
+		m_light.SetAmbientLight(0.1f, 0.1f, 0.1f);
 	}
 
 	void SPointLight::Update()

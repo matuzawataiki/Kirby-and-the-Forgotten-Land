@@ -18,7 +18,7 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 	skyCube->SetType(enSkyCubeType_SunriseToon);
 	skyCube->SetScale(2000.0f);
 
-	NewGO<Game>(0, "game");
+	NewGO<nsApp::Game>(0, "game");
 
 	// ここからゲームループ。
 	while (DispatchWindowMessage())

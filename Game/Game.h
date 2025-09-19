@@ -1,5 +1,10 @@
 #pragma once
 namespace nsApp {
+	namespace nsActor
+	{
+		class ItemManager;
+	}
+
 	class Game : public IGameObject
 	{
 	public:
@@ -10,5 +15,6 @@ namespace nsApp {
 		void Render(RenderContext& rc)override;
 	private:
 		ModelRender m_modelRender;
+		nsActor::ItemManager* m_pItemManager;
 	};
 }
