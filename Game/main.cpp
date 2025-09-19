@@ -1,5 +1,6 @@
 #include "stdafx.h"
 #include "system/system.h"
+#include "Game.h"
 
 // K2EngineLowのグローバルアクセスポイント。
 K2EngineLow* g_k2EngineLow = nullptr;
@@ -16,6 +17,8 @@ int WINAPI wWinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdLi
 	SkyCube* skyCube = NewGO<SkyCube>(0, "skyCube");
 	skyCube->SetType(enSkyCubeType_SunriseToon);
 	skyCube->SetScale(2000.0f);
+
+	NewGO<Game>(0, "game");
 
 	// ここからゲームループ。
 	while (DispatchWindowMessage())
