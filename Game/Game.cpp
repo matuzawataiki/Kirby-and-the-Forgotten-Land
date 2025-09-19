@@ -2,6 +2,8 @@
 #include "Game.h"
 #include "Effect/GameEffect.h"
 #include "Actor/Item/ItemManager.h"
+#include "Actor/Character/Player/Player.h"
+
 
 namespace nsApp {
 	Game::Game()
@@ -20,6 +22,9 @@ namespace nsApp {
 
 		m_modelRender.Init("Assets/test/testMap.tkm");
 		g_camera3D->SetPosition(Vector3(0.0f, 300.0f, -700.0f));
+
+		m_pPlayer = NewGO<nsActor::Player>(0, "Player");
+
 		return true;
 	}
 

@@ -14,6 +14,18 @@
     <ClCompile Include="Actor\Item\ItemManager.cpp">
       <Filter>Actor\Item</Filter>
     </ClCompile>
+    <ClCompile Include="Actor\Character\Character.cpp">
+      <Filter>Actor\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\StateMachine\IState.cpp">
+      <Filter>Actor\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\Character\Player\Player.cpp">
+      <Filter>Actor\Character\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\StateMachine\CharacterState.cpp">
+      <Filter>Actor\StateMachine</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -28,6 +40,18 @@
     <ClInclude Include="Actor\Item\ItemManager.h">
       <Filter>Actor\Item</Filter>
     </ClInclude>
+    <ClInclude Include="Actor\Character\Character.h">
+      <Filter>Actor\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\StateMachine\IState.h">
+      <Filter>Actor\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\Character\Player\Player.h">
+      <Filter>Actor\Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\StateMachine\CharacterState.h">
+      <Filter>Actor\StateMachine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Actor">
@@ -38,6 +62,15 @@
     </Filter>
     <Filter Include="Effect">
       <UniqueIdentifier>{0ed46e59-8380-406a-959a-bdee00f52467}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Character">
+      <UniqueIdentifier>{98ccbabe-8fe7-4c03-96c5-efe7567c4cd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\Character\Player">
+      <UniqueIdentifier>{0bee7aa7-74b8-48dd-b352-c5579e6363e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Actor\StateMachine">
+      <UniqueIdentifier>{305e780f-74c2-4d55-8c98-913dc4fbcbb2}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

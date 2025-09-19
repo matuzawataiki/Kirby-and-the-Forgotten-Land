@@ -29,7 +29,7 @@ namespace nsApp {
 			~Block() {};
 
 			bool Start();
-
+			
 			/**
 			 * @brief 初期化関数
 			 * @details ブロックのモデルの設定やコリジョンの作成

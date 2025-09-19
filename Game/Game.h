@@ -3,6 +3,7 @@ namespace nsApp {
 	namespace nsActor
 	{
 		class ItemManager;
+		class Player;
 	}
 
 	class Game : public IGameObject
@@ -16,5 +17,6 @@ namespace nsApp {
 	private:
 		ModelRender m_modelRender;
 		nsActor::ItemManager* m_pItemManager;
+		nsActor::Player* m_pPlayer;
 	};
 }
