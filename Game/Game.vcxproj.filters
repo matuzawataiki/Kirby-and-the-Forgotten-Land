@@ -26,6 +26,18 @@
     <ClCompile Include="Actor\StateMachine\CharacterState.cpp">
       <Filter>Actor\StateMachine</Filter>
     </ClCompile>
+    <ClCompile Include="Actor\AI\CharacterAIController.cpp">
+      <Filter>Actor\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\AI\IAIController.cpp">
+      <Filter>Actor\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\StateMachine\PlayerState.cpp">
+      <Filter>Actor\StateMachine</Filter>
+    </ClCompile>
+    <ClCompile Include="Actor\AI\PlayerAIController.cpp">
+      <Filter>Actor\AI</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
@@ -52,6 +64,19 @@
     <ClInclude Include="Actor\StateMachine\CharacterState.h">
       <Filter>Actor\StateMachine</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Actor\AI\CharacterAIController.h">
+      <Filter>Actor\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\AI\IAIController.h">
+      <Filter>Actor\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\StateMachine\PlayerState.h">
+      <Filter>Actor\StateMachine</Filter>
+    </ClInclude>
+    <ClInclude Include="Actor\AI\PlayerAIController.h">
+      <Filter>Actor\AI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Actor">
@@ -72,5 +97,11 @@
     <Filter Include="Actor\StateMachine">
       <UniqueIdentifier>{305e780f-74c2-4d55-8c98-913dc4fbcbb2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Actor\AI">
+      <UniqueIdentifier>{910f4c2d-cf54-4bc5-a207-55f39f37a949}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Game.rc" />
   </ItemGroup>
 </Project>

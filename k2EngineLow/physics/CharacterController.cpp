@@ -131,6 +131,9 @@ namespace nsK2EngineLow {
 	}
 	const Vector3& CharacterController::Execute(Vector3& moveSpeed, float deltaTime)
 	{
+		if (m_isJump == true) {
+			moveSpeed.y -= m_Gravity;
+		}
 		if (moveSpeed.y > 0.0f) {
 			//吹っ飛び中にする。
 			m_isJump = true;

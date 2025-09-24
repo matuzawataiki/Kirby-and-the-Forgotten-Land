@@ -53,6 +53,10 @@ namespace nsK2EngineLow {
 			m_position = pos;
 		}
 
+		void SetGravity(const float gravity) {
+			m_Gravity = gravity;
+		}
+
 		/*!
 			* @brief	ジャンプ中か判定
 			*/
@@ -94,5 +98,6 @@ namespace nsK2EngineLow {
 		float				m_radius = 0.0f;				//!<カプセルコライダーの半径。
 		float				m_height = 0.0f;				//!<カプセルコライダーの高さ。
 		RigidBody			m_rigidBody;					//剛体。
+		float				m_Gravity = 0.0f;
 	};
 }

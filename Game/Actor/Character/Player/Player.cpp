@@ -1,30 +1,36 @@
 #include "stdafx.h"
 #include "Player.h"
+#include "Actor/Character/Character.h"
+#include "Actor/StateMachine/PlayerState.h"
+#include "Actor/AI/PlayerAIController.h"
+
 namespace nsApp {
 	namespace nsActor {
-		Player::Player()
-			:m_Position(Vector3::Zero)
-			,m_Rotation(Quaternion::Identity)
-		{
-		}
+		namespace nsPlayer {
+			bool Player::Start()
+			{
 
-		Player::~Player()
-		{
-		}
+				return true;
+			}
 
-		bool Player::Start()
-		{
-			m_ModelRender.Init("Assets/modelData/unityChan.tkm");
-			return true;
-		}
+			void Player::Update()
+			{
+			}
 
-		void Player::Update()
-		{
-		}
+			void Player::Render(RenderContext& rc)
+			{
+			}
+			void Player::InitState()
+			{
+				m_StateMachine = new PlayerStateMachine;
+				m_StateMachine->RegisterState<IdelState>();
+				m_StateMachine->RegisterState<MoveState>();
+				m_StateMachine->RegisterState<JumpState>();
+				m_StateMachine->InitializeState<IdelState>();
 
-		void Player::Render(RenderContext& rc)
-		{
-			m_ModelRender.Draw(rc);
+				m_AIController = new PlayerAIController;
+
+			}
 		}
 	}
 }

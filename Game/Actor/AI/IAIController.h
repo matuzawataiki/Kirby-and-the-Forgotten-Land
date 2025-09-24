@@ -9,38 +9,37 @@ public:\
 namespace nsApp {
 	namespace nsActor {
 		/**
-		 * @brief ステートの基底クラス
+		 * @brief AIのステートマシンの基底クラス
 		 */
-		class IState
+		class IAIState
 		{
 		public:
-			IState(){}
-			virtual ~IState(){}
+			IAIState() {}
+			virtual ~IAIState() {}
 
 			virtual void Enter() = 0;
 			virtual void Update() = 0;
 			virtual void Exit() = 0;
+
+			virtual bool RequestState(uint32_t& request) = 0;
 		};
 
-		/**
-		 * @brief ステートマシンの基底クラス
-		 */
-		class StateMachineBase
+		class IAIController
 		{
-			using StateMap = std::unordered_map<uint32_t, IState*>;
+			using StateMap = std::unordered_map<uint32_t, IAIState*>;
 
 		protected:
 			StateMap m_StateMap;
-			IState* m_CurrentState;
+			IAIState* m_CurrentState;
 
 		public:
-			StateMachineBase()
+			IAIController()
 				:m_CurrentState(nullptr)
 			{
 				m_StateMap.clear();
 			}
 
-			virtual ~StateMachineBase()
+			virtual ~IAIController()
 			{
 				for (auto it : m_StateMap) {
 					delete it.second;
@@ -74,16 +73,13 @@ namespace nsApp {
 			 * @param id ステートのID
 			 * @return 見つからなかったらnullptrを返す
 			 */
-			inline IState* FindState(uint32_t id) {
+			inline IAIState* FindState(uint32_t id) {
 				const auto& it = m_StateMap.find(id);
 				if (it == m_StateMap.end()) {
 					return nullptr;
 				}
 				return it->second;
 			}
-
 		};
-
 	}
 }
-
